@@ -1,0 +1,24 @@
+package chapter_one;
+
+public class L1_8 {
+	public static void main(String[] args) {
+		int arr[][];
+		arr = new int[5][10];
+		int total = 0;
+		for(int i = 0;i <arr.length;i++) {
+			for(int j = 0;j < arr[i].length;j++) {
+				arr[i][j] = i*10+j;
+			}
+		}
+		for(int i = 0;i < arr.length;i++)
+			for(int j = 0;j < arr[i].length;j++)
+				total+=arr[i][j];
+		System.out.println("total:"+total);
+		total = 0;
+		//使用增强for循环
+		for(int[] a:arr)
+			for(int i:a)
+				total+=i;
+		System.out.println("total:"+total);
+	}
+}
